@@ -1,0 +1,32 @@
+{% block title %}
+{{ title }}
+Insert
+{% endblock %}
+
+{% block content %}
+<h3>Publisher</h3>
+    <table border="1" width="100%">
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Foundation</th>
+    </tr>
+    {% for el in dataPublisher %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.address}}</th>
+        <th>{{ el.foundation}}</th>
+    </tr>
+    {% endfor %}
+</table>
+<br/>
+<br/>
+<h5>Add Publisher</h5>
+<form method="post">
+    {% csrf_token %}
+    {{form}}<br/>
+    <button type="submit">Yes</button>
+</form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% block title %}
+{{ title }}
+Change
+{% endblock %}
+
+{% block content %}
+<h3>Publisher</h3>
+    <table border="1" width="100%">
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Foundation</th>
+    </tr>
+    {% for el in dataPublisher %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.address}}</th>
+        <th>{{ el.foundation}}</th>
+            <th><a href="editPublisher/{{el.id}}">Redact</a> | <a href="deletePublisher/{{el.id}}">Delete</a></th>
+        </tr>
+    {%endfor%}
+</table>
+{% endblock %}

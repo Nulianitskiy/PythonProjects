@@ -1,0 +1,23 @@
+{% block title %}
+{{ title }}
+Edit
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <tr>
+        <th><label for="id_name">Name:</label></th>
+        <td><input type="text" name="name" value="{{dataPub.name}}" required id="id_name"></td>
+    </tr>
+    <tr>
+        <th><label for="id_address">Address:</label></th>
+        <td><input type="text" name="address" value="{{dataPub.address}}" required id="id_address"></td>
+    </tr>
+    <tr>
+    <th><label for="id_foundation">Foundation Date:</label></th>
+    <td><input type="text" name="foundation" value="{{dataPub.foundation}}" required id="id_foundation"></td>
+  </tr>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

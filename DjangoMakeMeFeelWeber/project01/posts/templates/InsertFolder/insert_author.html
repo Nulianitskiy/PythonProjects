@@ -1,0 +1,36 @@
+{% block title %}
+{{ title }}
+Insert
+{% endblock %}
+
+{% block content %}
+<h3>Author</h3>
+    <table border="1" width="100%">
+        <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>Father Name</th>
+        <th>Pseudonym</th>
+        <th>Date Birth</th>
+    </tr>
+    {% for el in dataAuthor %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.first_name }}</th>
+        <th>{{ el.second_name}}</th>
+        <th>{{ el.father_name}}</th>
+        <th>{{ el.pseudonym}}</th>
+        <th>{{ el.date_birth}}</th>
+    </tr>
+    {% endfor %}
+</table>
+<br/>
+<br/>
+<h5>Add Author</h5>
+<form method="post">
+    {% csrf_token %}
+    {{form}}<br/>
+    <button type="submit">Yes</button>
+</form>
+{% endblock %}

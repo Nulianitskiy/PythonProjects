@@ -1,0 +1,31 @@
+{% block title %}
+{{ title }}
+Edit
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <tr>
+        <th><label for="id_first_name">First Name:</label></th>
+        <td><input type="text" name="first_name" value="{{dataPub.first_name}}" required id="id_first_name"></td>
+    </tr>
+    <tr>
+        <th><label for="id_second_name">Second Name:</label></th>
+        <td><input type="text" name="second_name" value="{{dataPub.second_name}}" required id="id_second_name"></td>
+    </tr>
+    <tr>
+        <th><label for="id_father_name">Father`s Name:</label></th>
+        <td><input type="text" name="father_name" value="{{dataPub.father_name}}" required id="id_father_name"></td>
+    </tr>
+    <tr>
+        <th><label for="id_pseudonym">Pseudonym:</label></th>
+        <td><input type="text" name="pseudonym" value="{{dataPub.pseudonym}}" required id="id_pseudonym"></td>
+    </tr>
+    <tr>
+    <th><label for="id_date_birth">Birth Date:</label></th>
+    <td><input type="text" name="date_birth" value="{{dataPub.date_birth}}" required id="id_date_birth"></td>
+  </tr>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

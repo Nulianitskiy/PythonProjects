@@ -1,0 +1,69 @@
+{% block title %}
+GetInfo
+{% endblock %}
+
+{% block content %}
+<h4>Books</h4><br/>
+<table border="1" width="100%">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Id_author</th>
+            <th>Genre</th>
+            <th>Id_publisher</th>
+            <th>Timestamp</th>
+        </tr>
+    {%for el in dataBook%}
+        <tr>
+            <th>{{ el.id }}</th>
+            <th>{{ el.name }}</th>
+            <th>{{ el.id_author }}</th>
+            <th>{{ el.genre }}</th>
+            <th>{{ el.id_publisher }}</th>
+            <th>{{ el.timestamp }}</th>
+        </tr>
+    {%endfor%}
+</table>
+<br/>
+<br/>
+<h4>Author</h4><br/>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>Father Name</th>
+        <th>Pseudonym</th>
+        <th>Date Birth</th>
+    </tr>
+    {% for el in dataAuthor %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.first_name }}</th>
+        <th>{{ el.second_name}}</th>
+        <th>{{ el.father_name}}</th>
+        <th>{{ el.pseudonym}}</th>
+        <th>{{ el.date_birth}}</th>
+    </tr>
+    {% endfor %}
+</table>
+<br/>
+<br/>
+<h4>Publisher</h4><br/>
+<table border="1" width="100%">
+     <tr>
+         <th>Id</th>
+         <th>Name</th>
+         <th>Address</th>
+         <th>Foundation</th>
+     </tr>
+     {% for el in dataPublisher %}
+     <tr>
+         <th>{{ el.id }}</th>
+         <th>{{ el.name }}</th>
+         <th>{{ el.address}}</th>
+         <th>{{ el.foundation}}</th>
+     </tr>
+     {% endfor %}
+ </table>
+{% endblock %}

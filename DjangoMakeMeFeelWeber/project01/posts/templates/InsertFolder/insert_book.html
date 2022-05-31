@@ -1,0 +1,36 @@
+{% block title %}
+{{ title }}
+Insert
+{% endblock %}
+
+{% block content %}
+<h3>Books</h3>
+    <table border="1" width="100%">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+            <th>timestamp</th>
+        </tr>
+    {%for el in dataBook%}
+        <tr>
+            <th>{{ el.id }}</th>
+            <th>{{ el.name }}</th>
+            <th>{{ el.id_author }}</th>
+            <th>{{ el.genre }}</th>
+            <th>{{ el.id_publisher }}</th>
+            <th>{{ el.timestamp }}</th>
+        </tr>
+    {%endfor%}
+</table>
+<br/>
+<br/>
+<h5>Add book</h5>
+<form method="post">
+    {% csrf_token %}
+    {{form}}<br/>
+    <button type="submit">Yes</button>
+</form>
+{% endblock %}

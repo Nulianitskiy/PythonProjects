@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<catalog>
+        <book id="100">
+            <id>100</id>
+            <name>Shit is happening</name>
+            <id_author>1</id_author>
+            <genre>Comedy</genre>
+            <id_pub>1</id_pub>
+            <publication>13-02-2000</publication>
+        </book>
+        <book id="101">
+            <id>101</id>
+            <name>Life goes on</name>
+            <id_author>2</id_author>
+            <genre>Tragedy</genre>
+            <id_pub>2</id_pub>
+            <publication>01-02-2021</publication>
+        </book>
+        <book id="102">
+            <id>102</id>
+            <name>Aphelion</name>
+            <id_author>3</id_author>
+            <genre>Science</genre>
+            <id_pub>3</id_pub>
+            <publication>28-04-1984</publication>
+        </book>
+</catalog>
